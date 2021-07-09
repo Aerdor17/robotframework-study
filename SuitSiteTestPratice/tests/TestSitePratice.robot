@@ -1,25 +1,22 @@
-***Setings***
-Library  SeleniumLibrary
+***Settings***
+Resource  ../resouce/Resource.robot
 
-***Variables***
-${URL}  http://automationpractice.com
-${BROWSER}  firefox
+Test Setup  Abrir navegador
+Test Teardown  Fechar navegador
 
-***Test Case**
-Caso de teste 1: pesquisar produto existente;
-    Abrir o navegador, acessar pagina do site
-    Verificar se a pagina foi exibida
-    No campo de pesquisa de itens digital "Blouse"
-    Clicar no botão pesquisar
-    Verificar se o produto foi encontrado
-
-
-Caso de teste 2: pesquisar produto inexistente;
-   Abrir o navegador, acessar pagina do site
-   Verificar se a pagina foi exibida
-   No campo de pesquisa de itens digitar "ItemNãoEncontrado"
-   Clicar no botão pesquisar
-   Verificar se o site apresentou a mensagem "No results were found for your search "produtoNãoExistente"""
-
-
-***Keywords***
+***Test Case***
+Caso de Teste 01: pesquisar produto existente;
+    Acessar a pagina home do site
+#     No campo de pesquisa de itens digital "Blouse"
+#     Clicar no botão pesquisar
+#     Verificar se o produto foi encontrado
+#
+#
+# Caso de Teste 2: pesquisar produto não existente;
+#    Abrir o navegador, acessar pagina do site
+#    No campo de pesquisa de itens digitar "ItemNãoEncontrado"
+#    Clicar no botão pesquisar
+#    Verificar se o site apresentou a mensagem "No results were found for your search "produtoNãoExistente"""
+#
+#
+# ***Keywords***
