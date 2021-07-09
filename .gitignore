@@ -144,4 +144,8 @@ cython_debug/
 # Ignore logs
 *.log
 
+# Ignore images
+*.jpg
+*.jpeg
+
 # End of https://www.toptal.com/developers/gitignore/api/python
