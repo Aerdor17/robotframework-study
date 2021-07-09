@@ -1,52 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0.3 (Python 3.9.6 on win32)" generated="20210708 22:46:43.543" rpa="false" schemaversion="2">
-<suite id="s1" name="TestSitePratice" source="C:\Users\Lucas\Documents\Projetos\robotframework-study\SuitSiteTestPratice\tests\TestSitePratice.robot">
+<robot generator="Robot 4.0.3 (Python 3.9.6 on win32)" generated="20210709 08:56:45.032" rpa="false" schemaversion="2">
+<suite id="s1" name="TestSitePratice" source="C:\Projetos\robotframework-study\SuitSiteTestPratice\tests\TestSitePratice.robot">
 <test id="s1-t1" name="Caso de Teste 01: pesquisar produto existente;">
 <kw name="Abrir navegador" library="Resource" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210708 22:46:43.884" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
-<msg timestamp="20210708 22:46:43.886" level="INFO">Firefox driver log is always forced to to: C:\Users\Lucas\Documents\Projetos\robotframework-study\SuitSiteTestPratice\results\geckodriver-9.log</msg>
-<status status="PASS" starttime="20210708 22:46:43.884" endtime="20210708 22:46:50.790"/>
+<msg timestamp="20210709 08:56:45.518" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
+<msg timestamp="20210709 08:56:45.521" level="INFO">Firefox driver log is always forced to to: C:\Projetos\robotframework-study\SuitSiteTestPratice\results\geckodriver-5.log</msg>
+<status status="PASS" starttime="20210709 08:56:45.517" endtime="20210709 08:56:53.684"/>
 </kw>
-<status status="PASS" starttime="20210708 22:46:43.883" endtime="20210708 22:46:50.791"/>
+<status status="PASS" starttime="20210709 08:56:45.516" endtime="20210709 08:56:53.692"/>
 </kw>
 <kw name="Acessar a pagina home do site" library="Resource">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>http://automationpractice.com</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210708 22:46:50.793" level="INFO">Opening url 'http://automationpractice.com'</msg>
-<status status="PASS" starttime="20210708 22:46:50.792" endtime="20210708 22:46:56.084"/>
+<msg timestamp="20210709 08:56:53.712" level="INFO">Opening url 'http://automationpractice.com'</msg>
+<status status="PASS" starttime="20210709 08:56:53.711" endtime="20210709 08:57:04.741"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>My Store</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20210708 22:46:56.089" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" starttime="20210708 22:46:56.084" endtime="20210708 22:46:56.089"/>
+<msg timestamp="20210709 08:57:04.759" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20210709 08:57:04.742" endtime="20210709 08:57:04.759"/>
 </kw>
-<status status="PASS" starttime="20210708 22:46:50.792" endtime="20210708 22:46:56.089"/>
+<status status="PASS" starttime="20210709 08:56:53.710" endtime="20210709 08:57:04.760"/>
+</kw>
+<kw name="No campo de pesquisa de itens digitar &quot;Blouse&quot;" library="Resource" sourcename="No campo de pesquisa de itens digitar &quot;${PRODUTO}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=search_query</arg>
+<arg>${PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210709 08:57:04.763" level="INFO">Typing text 'Blouse' into text field 'name=search_query'.</msg>
+<status status="PASS" starttime="20210709 08:57:04.762" endtime="20210709 08:57:04.952"/>
+</kw>
+<status status="PASS" starttime="20210709 08:57:04.761" endtime="20210709 08:57:04.953"/>
+</kw>
+<kw name="Clicar no botão pesquisar" library="Resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name=submit_search</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210709 08:57:04.955" level="INFO">Clicking element 'name=submit_search'.</msg>
+<status status="PASS" starttime="20210709 08:57:04.955" endtime="20210709 08:57:08.308"/>
+</kw>
+<status status="PASS" starttime="20210709 08:57:04.954" endtime="20210709 08:57:08.308"/>
+</kw>
+<kw name="Verificar se o produto foi encontrado">
+<msg timestamp="20210709 08:57:08.329" level="FAIL">No keyword with name 'Verificar se o produto foi encontrado' found.</msg>
+<status status="FAIL" starttime="20210709 08:57:08.329" endtime="20210709 08:57:08.330"/>
 </kw>
 <kw name="Fechar navegador" library="Resource" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210708 22:46:56.091" endtime="20210708 22:46:57.078"/>
+<status status="PASS" starttime="20210709 08:57:08.332" endtime="20210709 08:57:09.527"/>
 </kw>
-<status status="PASS" starttime="20210708 22:46:56.090" endtime="20210708 22:46:57.078"/>
+<status status="PASS" starttime="20210709 08:57:08.331" endtime="20210709 08:57:09.527"/>
 </kw>
-<status status="PASS" starttime="20210708 22:46:43.882" endtime="20210708 22:46:57.078"/>
+<status status="FAIL" starttime="20210709 08:56:45.515" endtime="20210709 08:57:09.527">No keyword with name 'Verificar se o produto foi encontrado' found.</status>
 </test>
-<status status="PASS" starttime="20210708 22:46:43.545" endtime="20210708 22:46:57.080"/>
+<status status="FAIL" starttime="20210709 08:56:45.032" endtime="20210709 08:57:09.545"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TestSitePratice">TestSitePratice</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestSitePratice">TestSitePratice</stat>
 </suite>
 </statistics>
 <errors>

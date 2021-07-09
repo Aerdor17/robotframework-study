@@ -7,9 +7,9 @@ Test Teardown  Fechar navegador
 ***Test Case***
 Caso de Teste 01: pesquisar produto existente;
     Acessar a pagina home do site
-#     No campo de pesquisa de itens digital "Blouse"
-#     Clicar no botão pesquisar
-#     Verificar se o produto foi encontrado
+    No campo de pesquisa de itens digitar "Blouse"
+    Clicar no botão pesquisar
+    Verificar se o produto "Blouse" foi encontrado
 #
 #
 # Caso de Teste 2: pesquisar produto não existente;
